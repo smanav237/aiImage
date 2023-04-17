@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Orbitron:wght@400;500&family=Roboto:wght@300&family=Ubuntu:ital,wght@1,300&display=swap');
+:root {
+    --main-font: 'Orbitron', sans-serif;
+    --title-font: 'Ubuntu', sans-serif;
+    --par-font: 'Roboto', sans-serif;
+
+    --color-blue: #67bbd1;
+    --color-dark: #2C3333;
+    --color-purple: #3f2756;
+    --color-magenta: #bb0359;
+    --color-pink: ##ea08b3;
+    --color-white: #FFFFFF;
+  }
+body{
+    background-color: #2C3333;
+    
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
