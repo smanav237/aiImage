@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { preview } from '../assets';
 import { getRandomPrompt } from '../utils';
 import { Form, Loader, Navbar } from '../components';
+import loader from "../assets/x.gif" 
+
 
 const CreatePost = () => {
   const navigate = useNavigate();
@@ -65,7 +67,7 @@ const CreatePost = () => {
         });
 
         await response.json();
-        alert('Success');
+        // alert('Success');
         navigate('/');
       } catch (err) {
         alert(err);
@@ -115,20 +117,20 @@ const CreatePost = () => {
               <img
                 src={form.photo}
                 alt={form.prompt}
-                className=""
+                className="post-image-img"
               />
             ) : (
               <img
                 src={preview}
                 alt="preview"
-                className="object-contain opacity-40"
+                className="post-image-img"
               />
             )}
 
             {generatingImg && (
-              <div className="loader-image">
+              <div className = "loader-image">
                 <Loader />
-              </div>
+                </div>
             )}
           </div>
         </div>

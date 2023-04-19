@@ -10,7 +10,7 @@ const RenderCards = ({ data, title }) => {
   }
 
   return (
-    <h2 className="mt-5 font-bold text-[#6469ff] text-xl uppercase">{title}</h2>
+    <h2 className="defaultTitle">{title}</h2>
   );
 };
 
@@ -61,9 +61,8 @@ const Homepage = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="main-div">
     <Navbar/>
-      
     <div className="header">
       <img src={bgImage32} alt="bgimage"/>
         <div className="wrapper">
@@ -86,8 +85,8 @@ const Homepage = () => {
       <div className="homepage-cards">
         <p>Featured Gallery</p>
         {loading ? (
-          <div className="flex justify-center items-center">
-            <Loader />
+          <div className="loading-icon">
+            <Loader  />
           </div>
         ) : (
           <>
@@ -96,7 +95,7 @@ const Homepage = () => {
                 Showing Resuls for {searchText}
               </h2>
             )}
-            <div className='row card-section'>
+            <div className='wrapper-grid'>
               {searchText ? (
                 <RenderCards
                   data={searchedResults}
@@ -112,6 +111,11 @@ const Homepage = () => {
           </>
         )}
       </div>
+
+      <div className="footer">
+       <p>© Manav - 2023</p> 
+      </div>
+
     </div>
   );
 };
