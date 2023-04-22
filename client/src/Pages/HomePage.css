@@ -1,10 +1,19 @@
 /* Homepage*/
+
+.head-main{
+  margin: 15px auto;
+    display:flex;
+    flex-direction:column;
+    min-height: 100vh;
+}
+.main-div{
+  margin-top:15px;
+  padding-bottom:80px;
+}
 .header{
     position: relative;
     text-align: center;
-    margin:15px;
-    /* resize:both; */
-    /* overflow: hidden; */
+    overflow: hidden;
   }
   .header img{
       width:100%;
@@ -17,9 +26,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 90px;
+    resize:both;
   }
     
-  .line__1,.line__2 {
+  .line_1,.line_2 {
       white-space: nowrap; /* keep text in one line */
       overflow: hidden;  /*hide text behind the cursor */
       margin: 0.5rem auto;
@@ -27,17 +37,17 @@
       font-family: var(--title-font);
       font-size: 40px;
       border-right: 7px solid dodgerblue;
+      /* overflow-wrap: normal; */
   }
     
     
-  .line__1 {
-      
-      animation: animated-text__1 6s steps(30, end) 1s 1 normal both,
-        animated-cursor__1 900ms steps(30, end) 8;
+  .line_1 {
+      animation: animated-text__1 5.5s steps(30, end) 1s  normal both,
+      animated-cursor__1 900ms steps(30, end) 8;
     }
     
-    .line__2 {
-      animation: animated-text__2 5s steps(30, end) 1s 1 normal both,
+    .line_2 {
+      animation: animated-text__2 6s steps(30, end) 1s infinite  both,
         animated-cursor__2 900ms steps(30, end) infinite ;
       -webkit-animation-delay: 7s;
       animation-delay: 7s;
@@ -53,7 +63,7 @@
       }
   }
     
-    @keyframes animated-cursor__2 {
+  @keyframes animated-cursor__2 {
       from {
           border-right-color: dodgerblue;
         }
@@ -78,16 +88,16 @@
         border:none;
       }
       to {
-        width: 57rem;
+        width: 50rem;
       }
     }
   
   
   .homepage-form{
-      margin:15px;
+      margin:15px 0 15px 0;
   }
   .homepage-cards{
-      margin:15px;
+      margin:15px 0 15px 0;
   }
   .loading-icon{
     display:flex;
@@ -118,6 +128,7 @@
     align-items: center;
   }
   .wrapper-grid{
+    margin-top:25px;;
       display:grid;
       grid-template-columns:repeat(auto-fit,18.5rem);
       justify-content: space-around;
@@ -190,33 +201,105 @@
       cursor: pointer;
       padding:0;
   }
-  
-  .footer p{
-    text-align: center;
-    margin-top:90px;
-    font-size: 20px;
-    font-family:var(--title-font);
-    color:#B2B2B2;
-  }
+
 
   @media only screen and (max-width:500px){
     .header img{
       width:100%;
       height:225px;
     }
+    .wrapper{
+    line-height: 32px;
+    }
+    .line_1,.line_2{
+      font-size: 15px;
+      display:flex;
+      flex-direction: column;
+    }
+    .line_1{
+      -webkit-animation:none;
+      border-right: none;
+    }
+    .line_2 {
+      animation: animated-text__2 6s steps(30, end) 1s infinite  both,
+        animated-cursor__2 900ms steps(30, end) infinite ;
+      -webkit-animation-delay: 0s;
+      animation-delay: 0s;
+      border-right: solid 4px dodgerblue;
+
+    }
+    @keyframes animated-cursor__2 {
+      from {
+          border-right-color: dodgerblue;
+        }
+        to {
+          border-right-color: #ea08b3;
+        }
+    }
+    @keyframes animated-text__2 {
+      from {
+        width: 0;
+      }
+      to {
+        width: 19rem;
+      }
+    }
     
     }
     @media screen and (min-width:500px) and (max-width:980px){
-      .header img{
-        width:100%;
-        height:325px;
+      .head-main{
+        width:92%;
+      }
+     .header img{
+      width:100%;
+      height:325px;
+    }
+    .wrapper{
+      line-height: 62px;
+    }
+    .line_1,.line_2{
+      font-size:23px;
+    } 
+    @keyframes animated-text__1 {
+      from {
+        width: 0;
+      }
+      to {
+        width: 45rem;
+        border:none;
+      }
+    }
+    
+    @keyframes animated-text__2 {
+      from {
+        width: 0;
+        border:none;
+      }
+      to {
+        width: 29rem;
+      }
     }
       }
-  @media screen and (min-width:980px)
+  @media screen and ((min-width:980px) and  (max-width:1200px))
   {
-    .header img{
-      width:100%;
-      height:425px;
+  .header img{
+    width:100%;
+    height:370px;
+  }
+  .wrapper{
+    line-height: 80px;
+  }
+  .line_1,.line_2{
+    font-size:33px;
+  } 
+  @keyframes animated-text__2 {
+    from {
+      width: 0;
+      border:none;
+    }
+    to {
+      width: 41rem;
+    }
   }
     }
 

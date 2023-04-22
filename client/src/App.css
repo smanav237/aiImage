@@ -1,13 +1,13 @@
 	@import url("./Pages/CreatePost.css");
 	@import url("./Pages/HomePage.css");
 
-
 /* Navbar */
 .navbar{
     justify-content: space-between;
     background: none;
     display: flex;
-    padding:15px 40px 0 10px;   /*TRBL*/
+    padding:0 40px 0 20px;   /*TRBL*/
+	/* border:solid white; */
 }
 .nav-logo{
     height:60px;
@@ -29,9 +29,6 @@
 
 
 /* FORM */
-.label{
-
-}
 .label-name{
 	color:#F5F2E7;
     font-size:15px;
@@ -47,7 +44,6 @@
 	color:white;
 	padding:15px;
 	margin-bottom:18px;
-
 }
 .form-input-field::placeholder{
 	color:#99adaa;
@@ -57,7 +53,16 @@
 	font-size:13px;
 	margin:0 0 7px 23px;
 }
-
+.footers{
+    background-color: #2C3333;
+    margin-top:auto;
+    }
+.footers p{
+    font-family:var(--title-font);
+    color:#B2B2B2;
+    font-size:20px;
+    text-align:center;
+  }
 @media screen and (max-width: 500px) { /* Mobile*/
     .nav-logo{
         height:30px;
@@ -66,3 +71,17 @@
 		width:50px;
     }
   }
+  @media screen and ((min-width:500px) and (max-width: 900px))
+	{
+        .form-content{
+            margin:25px 0;
+        }
+        .label-name{
+            font-size:15px;
+            font-family:var(--par-font);
+            margin-bottom:0px;
+        }
+        .surprise-btn{
+            margin:10px 0 8px 23px;
+        }
+   }

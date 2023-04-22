@@ -1,18 +1,18 @@
 /* Create-Post */
-
-/* html{
-	overflow-y: hidden;;
-} */
+.create-post{
+	margin: 15px auto;
+	display:flex;
+	flex-direction:column;
+	min-height:100vh;
+}
 .create-section{
-	margin:auto;
-	margin-top:7px;
-	width:800px;
-    /* border:solid white; */
+	margin:10px auto;
+	align-items: center;
+	justify-content: center;
+	width:60%;	
 }
 .post-header{
 	font-family:var(--par-font);
-	display:flex;
-	flex-wrap: wrap;
 }
 .post-header h1{
 	font-size: 26px;
@@ -83,19 +83,6 @@
 .cust-button2:hover{
 	background-color: dodgerblue;
 }
-.footer{
-	margin:20px 0 0 0;
-	height:50px;
-	padding:0;
-	background:none;
-}
-.footer p{
-	text-align: center;
-	margin-top:90px;
-	font-size: 20px;
-	font-family:var(--title-font);
-	color:#B2B2B2;
-}
 
   @media only screen and (max-width:500px){
 	.create-section {
@@ -104,22 +91,24 @@
     .cust-button2{
         margin-top:17px;
     }
-	
-    
     }
     @media screen and (min-width:500px) and (max-width:980px){
+		.post-header h1{
+			font-size: 30px;
+		}
+		.post-header p{
+			font-size: 19.5px;
+		}
 		.create-section {
-			width:60%;
+			margin-top:45px;
+			width:70%;
+			border: solid red;
+		  }
+		  .cust-buttons{
+			margin:30px 0;
 		  }
 		  .cust-button2{
-			  margin-top:17px;
+			margin-top:17px;
 		  }
-		  
-      }
-  @media screen and (min-width:980px)
-  {
-    .create-section {
-		width:800px;
-	  }
     }
-
+	

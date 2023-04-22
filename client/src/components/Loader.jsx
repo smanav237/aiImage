@@ -1,11 +1,11 @@
 
 import React from 'react'
-import loading from "../assets/x.gif"
+import { loaders } from '../assets'
 
 const Loader = () =>{
     return (
       <div >
-        <img src={loading}  alt="loading" />
+        <img src={loaders}  alt="loading" />
       </div>
     )
   }

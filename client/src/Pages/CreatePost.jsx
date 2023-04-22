@@ -80,7 +80,7 @@ const CreatePost = () => {
   };
 
   return (
-    <div className="createPost">
+    <div className="create-post">
     <div>
       <Navbar/>
     </div>
@@ -96,7 +96,7 @@ const CreatePost = () => {
             labelName="Your Name"
             type="text"
             name="name"
-            placeholder="Ex., john doe"
+            placeholder="John Wick"
             value={form.name}
             handleChange={handleChange}
           />
@@ -105,7 +105,7 @@ const CreatePost = () => {
             labelName="Prompt"
             type="text"
             name="prompt"
-            placeholder="An Impressionist oil painting of sunflowers in a purple vase…"
+            placeholder="an oil pastel drawing of an annoyed cat in a spaceship"
             value={form.prompt}
             handleChange={handleChange}
             isSurpriseMe
@@ -152,13 +152,12 @@ const CreatePost = () => {
           </button>
           </div>
 
-      </form>
-      <div className="footer">
-       <p>© Manav - 2023</p> 
-      </div>
-      
+      </form>  
     </div>
-
+    
+    <div className="footers">
+       <p>© Manav - 2023</p> 
+    </div>
     </div>
   );
 };
