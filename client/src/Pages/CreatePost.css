@@ -36,13 +36,11 @@
 
 }
 .loader-image {
-	/* display: flex; */
 	position: absolute;
 	z-index:1;
 	width:260px;
 	height:185px;
 	margin: -160px 0 0 0;
-	/* border:solid orange; */
 	background: none;
 }
 .cust-buttons{
@@ -101,8 +99,7 @@
 		}
 		.create-section {
 			margin-top:45px;
-			width:70%;
-			border: solid red;
+			width:67%;
 		  }
 		  .cust-buttons{
 			margin:30px 0;
