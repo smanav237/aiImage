@@ -22,7 +22,7 @@ const Homepage = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5959/api/v1/post", {
+      const response = await fetch("https://ai-image-d3iy.onrender.com/api/v1/post", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
