@@ -34,3 +34,13 @@ body{
  p{
     margin: 0;
  }
+ button:focus{
+	outline:none;
+	box-shadow: none;
+}
+img{
+    
+    outline:none;
+    box-shadow: none;
+    
+}
